@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+Data/
+mne_data/
+openbmi_bci_illiteracy_result.csv
+outputs/plan_a_cache/
+outputs/openbmi_cache/
+outputs/plan_a_prepare_check/
+outputs/openbmi_plan_a_prepare/
+outputs/openbmi_plan_b_prepare/
+outputs/openbmi_*/
+models/openbmi_*/

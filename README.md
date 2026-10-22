@@ -118,4 +118,10 @@ python src/online/main_app.py
 - 离线评估（v65）：`src/offline/evaluate_v65_offline.py`
 - 在线流式评估：`src/online/evaluate_v50pro_stream.py`
 
+## 6. OpenBMI 方案 A（二分类）
+
+新增的蒸馏基线、弱特征增强和 DANN 训练位于 `src/plan_a/`，支持离线与因果在线预处理、消融对照、断点恢复及跨会话评估。服务器运行命令、分组来源限制与在线推理接口见 [OpenBMI 方案 A 文档](docs/openbmi_plan_a.md)。原有 IV-2a 模型与运行流程保持独立。
+
+方案 B 在 `src/plan_b/` 独立实现频带扰动、通道掩膜和监督式对比学习，保留蒸馏底座，使用单独的训练入口、权重与结果目录。训练及 A/B 配对比较命令见 [OpenBMI 方案 B 文档](docs/openbmi_plan_b.md)。
+
 
