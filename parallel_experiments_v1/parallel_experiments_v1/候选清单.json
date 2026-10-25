@@ -1,0 +1,72 @@
+{
+  "subject_adaptive": {
+    "script": "train_subject_weighted.py",
+    "recipe_arguments": [
+      "--reweight-mode",
+      "adaptive_low",
+      "--reweight-cap",
+      "1.5"
+    ]
+  },
+  "subject_uniform": {
+    "script": "train_subject_weighted.py",
+    "recipe_arguments": [
+      "--reweight-mode",
+      "uniform_low",
+      "--reweight-cap",
+      "1.25"
+    ]
+  },
+  "subject_all": {
+    "script": "train_subject_weighted.py",
+    "recipe_arguments": [
+      "--reweight-mode",
+      "adaptive_all",
+      "--reweight-cap",
+      "1.5"
+    ]
+  },
+  "no_kd_control": {
+    "script": "train_subject_weighted.py",
+    "recipe_arguments": [
+      "--reweight-mode",
+      "none",
+      "--reweight-cap",
+      "1",
+      "--kd-scale",
+      "0"
+    ]
+  },
+  "delayed_dann": {
+    "script": "train_recipe.py",
+    "recipe_arguments": [
+      "--recipe",
+      "delayed_dann",
+      "--domain-warmup",
+      "10",
+      "--domain-ramp",
+      "40"
+    ]
+  },
+  "gradient_protected": {
+    "script": "train_recipe.py",
+    "recipe_arguments": [
+      "--recipe",
+      "gradient_protected"
+    ]
+  },
+  "weak_contrast": {
+    "script": "train_recipe.py",
+    "recipe_arguments": [
+      "--recipe",
+      "weak_contrast"
+    ]
+  },
+  "weak_augment": {
+    "script": "train_recipe.py",
+    "recipe_arguments": [
+      "--recipe",
+      "weak_augment"
+    ]
+  }
+}
